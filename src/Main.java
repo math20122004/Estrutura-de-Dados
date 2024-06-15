@@ -1,3 +1,4 @@
+import DataStructure.Arvore;
 import DataStructure.Fila;
 import DataStructure.ListaLinkada;
 import DataStructure.Pilha;
@@ -71,7 +72,36 @@ public class Main {
         fila.print();
         System.out.println(fila.dequeue());
         System.out.println(fila.dequeue());
-        System.out.println(fila.dequeue() + "\n\n\n");
+        System.out.println(fila.dequeue() + "\n\n");
         Fila.filaMer(3);
+        System.out.println("\n\n");
+
+        //ÁRVORE
+        Arvore arvore = new Arvore();
+        arvore.insert(37);
+        arvore.insert(11);
+        arvore.insert(66);
+        arvore.insert(8);
+        arvore.insert(17);
+        arvore.insert(42);
+        arvore.insert(72);
+        arvore.preOrder();
+        System.out.println("==========================");
+        arvore.emOrdem();
+        System.out.println("==========================");
+        arvore.posOrdem();
+        System.out.println("==========================");
+
+
+        System.out.println(arvore.raiz.value);
+        System.out.println(arvore.raiz.left.value);
+        System.out.println(arvore.raiz.right.value);
+
+        System.out.println(arvore.raiz.isLeaf());
+        System.out.println(arvore.raiz.left.isLeaf());
+        System.out.println("==========================");
+
+        arvore.BFS();
+
     }
 }
